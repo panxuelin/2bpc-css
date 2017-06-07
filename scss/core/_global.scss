@@ -1,0 +1,171 @@
+@charset "utf-8";
+@import "common";
+
+body{
+  font-family:#{"微软雅黑", Helvetica, STHeiTi, sans-serif};
+  color:$sz-color-black;
+}
+
+[v-cloak]{
+  display: none;
+}
+
+//垂直对齐方式
+.vt {
+  vertical-align: top !important;
+}
+
+.vm {
+  vertical-align: middle !important;
+}
+
+.vb {
+  vertical-align: bottom !important;
+}
+
+@for $i from 0 through 55 {
+  //外边距
+  .mt#{$i} {
+    margin-top: $i * 1px !important;
+  }
+  .mt_#{$i} {
+    margin-top: -$i * 1px !important;
+  }
+  .mr#{$i} {
+    margin-right: $i * 1px !important;
+  }
+  .mb#{$i} {
+    margin-bottom: $i * 1px !important;
+  }
+  .ml#{$i} {
+    margin-left: $i * 1px !important;
+  }
+  //内边距
+  .pt#{$i} {
+    padding-top: $i * 1px !important;
+  }
+  .pr#{$i} {
+    padding-right: $i * 1px !important;
+  }
+  .pb#{$i} {
+    padding-bottom: $i * 1px !important;
+  }
+  .pl#{$i} {
+    padding-left: $i * 1px !important;
+  }
+
+  .l#{$i} {
+    line-height: $i * 1px !important;
+  }
+  .top#{$i} {
+    top: $i * 1px !important;
+  }
+}
+
+//浮动
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+//文字横向方式
+.tr {
+  text-align: right !important;
+}
+
+.tl {
+  text-align: left !important;
+}
+
+.tc {
+  text-align: center !important;
+}
+
+.displayBlock {
+  display: block;
+}
+
+//字体颜色
+.text-green {
+  color: $sz-color-green !important;
+}
+
+.text-danger {
+  color: $sz-color-red !important;;
+}
+
+.text-red {
+  color: $sz-color-red !important;;
+}
+
+.text-blue {
+  color: $sz-color-blue !important;;
+}
+
+.text-gray {
+  color: $sz-color-gray !important;;
+}
+
+.text-black {
+  color: $sz-color-black !important;;
+}
+
+.text-minus-gray {
+  color: $sz-color-minus-gray !important;;
+}
+
+.text-success {
+  color: $sz-bg-color-success !important;;
+}
+
+.text-white {
+  color: #fff !important;;
+}
+
+.text-yellow {
+  color: $sz-color-yellow !important;;
+}
+
+.text-orange {
+  color: $sz-color-orange !important;;
+}
+
+
+//f0~f30 定义字号
+@for $i from 0 through 30 {
+  .f#{$i} {
+    font-size: $i * 1px !important;
+  }
+}
+
+//隐藏
+.hidden {
+  display: none !important;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.lineThrough {
+  text-decoration: line-through;
+}
+
+/* 通用 */
+::-webkit-input-placeholder { color:$sz-color-text-disabled; }
+::-moz-placeholder { color:$sz-color-text-disabled; } /* firefox 19+ */
+:-ms-input-placeholder { color:$sz-color-text-disabled; } /* ie */
+input:-moz-placeholder { color:$sz-color-text-disabled; }
+
+/* webkit专用 */
+#field2::-webkit-input-placeholder { color:$sz-color-text-disabled; }
+#field3::-webkit-input-placeholder { color:$sz-color-text-disabled; }
+#field4::-webkit-input-placeholder {  color:$sz-color-text-disabled; }
+
+/* mozilla专用 */
+#field2::-moz-placeholder { color:$sz-color-text-disabled; }
+#field3::-moz-placeholder { color:$sz-color-text-disabled; }
+#field4::-moz-placeholder { color:$sz-color-text-disabled; }

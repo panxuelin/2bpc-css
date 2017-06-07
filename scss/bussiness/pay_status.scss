@@ -1,0 +1,149 @@
+@charset "utf-8";
+@import "../core/global";
+
+$primaryColor: #318FF5;
+
+body {
+  min-width: 1200px;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.sz-header {
+  position: fixed;
+  z-index: 1100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid $sz-border-color-gray;
+  .title {
+    height: 80px;
+    line-height: 80px;
+    font-size: 24px;
+    color: $sz-color-gray;
+    margin: 0 auto;
+    @include flexbox;
+    @include align($justify-content: flex-start);
+    .logo {
+      height: 50px;
+    }
+    .right {
+      @include flex;
+      @include flexbox;
+      @include align($justify-content: flex-end);
+      height: 60px;
+      .barcode {
+        height: 60px;
+        width: 60px;
+      }
+      .words {
+        line-height: 24px;
+        margin-left: 20px;
+        font-size: 14px;
+        color: $sz-color-black;
+      }
+    }
+
+  }
+}
+
+.sz-progress {
+  margin-top: 80px;
+  width: 100%;
+  background-color: #f8f8f8;
+  height: 50px;
+  line-height: 50px;
+
+  .progress-ul {
+    padding: 0;
+    overflow: hidden;
+    > li {
+      margin-left: 25px;
+      height: 50px;
+      line-height: 50px;
+      float: left;
+      list-style: none;
+      color: $sz-color-text-disabled;
+      font-size: 16px;
+      &:before {
+        content: '/';
+        margin-right: 25px;
+        color: $sz-color-text-disabled;
+      }
+      &:first-child {
+        margin-left: 0px;
+        &:before {
+          content: '';
+          margin-right: 0px;
+        }
+      }
+      &.item-on {
+        color: $sz-color-black;
+      }
+    }
+  }
+}
+
+.sz-body {
+  margin-top: 40px;
+  width: 100%;
+  background-color: #fff;
+  padding-bottom:80px;
+  .pay{
+    background-color: #fafafa;
+    padding:36px 0 45px;
+   text-align: center;
+    .icon{
+      margin: 0 auto 10px;
+      width:30px;
+      height:30px;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+    .go-btn{
+      margin:0 auto;
+      width:170px;
+      height:50px;
+      border:2px solid $primaryColor;
+      line-height: 46px;
+      color:#fff;
+      font-size: 16px;
+      text-align: center;
+      background-color: $primaryColor;
+    }
+    &.success-pay{
+      .icon{
+        background-image: url(../images/fa/icon_pay_success.png);
+      }
+    }
+    &.fail-pay{
+      .icon{
+        background-image: url(../images/fa/icon_pay_fail.png);
+      }
+    }
+  }
+
+}
+
+@media (min-width: 768px) {
+  .container {
+    width:1170px
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width:1170px
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width:1170px
+  }
+}
+
+

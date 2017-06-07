@@ -1,0 +1,186 @@
+@charset "utf-8";
+@import "../core/global";
+
+$primaryColor: #318FF5;
+
+body {
+  min-width: 1200px;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.sz-header {
+  position: fixed;
+  z-index: 1100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid $sz-border-color-gray;
+  .title {
+    height: 80px;
+    line-height: 80px;
+    font-size: 24px;
+    color: $sz-color-gray;
+    margin: 0 auto;
+    @include flexbox;
+    @include align($justify-content: flex-start);
+    .logo {
+      height: 50px;
+    }
+    .right {
+      @include flex;
+      @include flexbox;
+      @include align($justify-content: flex-end);
+      height: 60px;
+      .barcode {
+        height: 60px;
+        width: 60px;
+      }
+      .words {
+        line-height: 24px;
+        margin-left: 20px;
+        font-size: 14px;
+        color: $sz-color-black;
+      }
+    }
+
+  }
+}
+
+.sz-progress {
+  margin-top: 80px;
+  width: 100%;
+  background-color: #f8f8f8;
+  height: 50px;
+  line-height: 50px;
+
+  .progress-ul {
+    padding: 0;
+    overflow: hidden;
+    > li {
+      margin-left: 25px;
+      height: 50px;
+      line-height: 50px;
+      float: left;
+      list-style: none;
+      color: $sz-color-text-disabled;
+      font-size: 16px;
+      &:before {
+        content: '/';
+        margin-right: 25px;
+        color: $sz-color-text-disabled;
+      }
+      &:first-child {
+        margin-left: 0px;
+        &:before {
+          content: '';
+          margin-right: 0px;
+        }
+      }
+      &.item-on {
+        color: $sz-color-black;
+      }
+    }
+  }
+}
+
+.sz-body {
+  margin-top: 40px;
+  width: 100%;
+  background-color: #fff;
+  padding-bottom: 80px;
+  .combo-control {
+    height: 150px;
+    margin-bottom: 40px;
+    .name {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    .combo {
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 18px;
+      color: $sz-color-gray;
+    }
+    .btn-contorl {
+      .go-btn {
+        margin-top: 38px;
+        width: 150px;
+        height: 50px;
+        border: 1px solid $primaryColor;
+        line-height: 48px;
+        font-size: 16px;
+        margin-right: 30px;
+        display: inline-block;
+        text-align: center;
+        &.report-btn {
+          color: #fff;
+          background-color: $primaryColor;
+        }
+        &.radio-btn {
+          color: $primaryColor;
+          background-color: #fff;
+        }
+      }
+    }
+    .right {
+      @include align;
+      .big-barcode {
+        width: 150px;
+        height: 150px;
+      }
+      .words {
+        margin-left: 15px;
+        font-size: 20px;
+        line-height: 35px;
+      }
+    }
+  }
+  .info-control {
+    border-top: 2px solid $primaryColor;
+    background-color: #fafafa;
+    padding: 10px 20px 40px;
+    .title {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    .words{
+      margin-top: 20px;
+      color:$sz-color-gray;
+      font-size: 16px;
+      line-height: 20px;
+      @include flexbox;
+      .name{
+        width:90px;
+        margin-right: 10px;
+      }
+      .desc{
+        @include flex;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width:1170px
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width:1170px
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width:1170px
+  }
+}
+
+
+
