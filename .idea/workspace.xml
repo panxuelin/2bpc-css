@@ -257,7 +257,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../yo-css" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="E:\software\nodejs\node.exe" />
@@ -363,12 +363,12 @@
       <workItem from="1495178234007" duration="1467000" />
       <workItem from="1495419516302" duration="968000" />
       <workItem from="1496470827986" duration="649000" />
-      <workItem from="1496800319354" duration="5517000" />
+      <workItem from="1496800319354" duration="6156000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181370000" />
+    <option name="totallyTimeSpent" value="182009000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -380,7 +380,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="997" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="997" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21987315" sideWeight="0.5897436" order="2" side_tool="true" content_ui="tabs" />
