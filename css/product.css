@@ -2764,99 +2764,29 @@ body {
   font-size: 24px;
   color: #999;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -o-box;
-  display: -o-flex;
-  display: -moz-box;
-  display: -moz-flex;
-  display: flex;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -o-box;
-  display: -o-flex;
-  display: -moz-box;
-  display: -moz-flex;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  -o-box-pack: start;
-  -o-justify-content: flex-start;
-  -moz-box-pack: start;
-  -moz-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  -o-box-align: center;
-  -o-align-items: center;
-  -moz-box-align: center;
-  -moz-align-items: center;
-  align-items: center;
-  word-wrap: break-word;
-  word-break: break-all;
 }
 
 .sz-header .title .logo {
+  float: left;
+  margin-top: 15px;
   height: 50px;
 }
 
 .sz-header .title .right {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  -o-box-flex: 1;
-  -o-flex: 1;
-  -moz-box-flex: 1;
-  -moz-flex: 1;
-  flex: 1;
-  width: .1px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -o-box;
-  display: -o-flex;
-  display: -moz-box;
-  display: -moz-flex;
-  display: flex;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -o-box;
-  display: -o-flex;
-  display: -moz-box;
-  display: -moz-flex;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  -o-box-pack: end;
-  -o-justify-content: flex-end;
-  -moz-box-pack: end;
-  -moz-justify-content: flex-end;
-  justify-content: flex-end;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  -o-box-align: center;
-  -o-align-items: center;
-  -moz-box-align: center;
-  -moz-align-items: center;
-  align-items: center;
-  word-wrap: break-word;
-  word-break: break-all;
+  float: right;
+  margin-top: 10px;
   height: 60px;
 }
 
 .sz-header .title .right .barcode {
+  float: left;
   height: 60px;
   width: 60px;
 }
 
 .sz-header .title .right .words {
+  margin-top: 6px;
+  float: left;
   line-height: 24px;
   margin-left: 20px;
   font-size: 14px;
@@ -2950,57 +2880,25 @@ body {
   float: left;
   margin-left: 30px;
   margin-bottom: 10px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -o-box;
-  display: -o-flex;
-  display: -moz-box;
-  display: -moz-flex;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  -o-box-pack: start;
-  -o-justify-content: flex-start;
-  -moz-box-pack: start;
-  -moz-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  -o-box-align: center;
-  -o-align-items: center;
-  -moz-box-align: center;
-  -moz-align-items: center;
-  align-items: center;
-  word-wrap: break-word;
-  word-break: break-all;
 }
 
 .sz-body .goods-info .trait-control .list > li .icon {
+  float: left;
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
 
 .sz-body .goods-info .trait-control .list > li > span {
-  display: inline-block;
-  width: 120px;
+  float: left;
+  width: 115px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  line-height: 20px;
 }
 
 .sz-body .nav-control {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -o-box;
-  display: -o-flex;
-  display: -moz-box;
-  display: -moz-flex;
-  display: flex;
   margin-top: 15px;
   margin-bottom: 20px;
   height: 51px;
@@ -3011,6 +2909,7 @@ body {
 }
 
 .sz-body .nav-control .item {
+  float: left;
   margin-left: 50px;
   height: 50px;
   line-height: 50px;
@@ -3104,17 +3003,11 @@ body {
 
 .sz-body .btn-control {
   margin-top: 30px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -o-box;
-  display: -o-flex;
-  display: -moz-box;
-  display: -moz-flex;
-  display: flex;
+  overflow: hidden;
 }
 
 .sz-body .btn-control .go-btn {
+  float: left;
   background-color: #318FF5;
   color: #fff;
   width: 170px;
@@ -3126,6 +3019,7 @@ body {
 }
 
 .sz-body .btn-control .back-btn {
+  float: left;
   border: 1px solid #318FF5;
   color: #318FF5;
   width: 170px;
@@ -3172,41 +3066,18 @@ body {
 }
 
 .view-control .addPkg-control .top {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -o-box;
-  display: -o-flex;
-  display: -moz-box;
-  display: -moz-flex;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  -o-box-pack: start;
-  -o-justify-content: flex-start;
-  -moz-box-pack: start;
-  -moz-justify-content: flex-start;
-  justify-content: flex-start;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  -o-box-align: center;
-  -o-align-items: center;
-  -moz-box-align: center;
-  -moz-align-items: center;
-  align-items: center;
-  word-wrap: break-word;
-  word-break: break-all;
+  overflow: hidden;
 }
 
 .view-control .addPkg-control .top .name {
+  float: left;
   font-size: 20px;
   height: 24px;
   line-height: 24px;
 }
 
 .view-control .addPkg-control .top .rule {
+  float: left;
   margin-left: 10px;
   height: 24px;
   line-height: 24px;
@@ -3361,27 +3232,12 @@ body {
 }
 
 .fixed-footer .bottom-control {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -o-box;
-  display: -o-flex;
-  display: -moz-box;
-  display: -moz-flex;
-  display: flex;
   height: 50px;
 }
 
 .fixed-footer .bottom-control .info {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  -o-box-flex: 1;
-  -o-flex: 1;
-  -moz-box-flex: 1;
-  -moz-flex: 1;
-  flex: 1;
-  width: .1px;
+  float: left;
+  width: 770px;
   text-align: right;
   font-size: 16px;
   height: 50px;
@@ -3402,6 +3258,7 @@ body {
 }
 
 .fixed-footer .bottom-control .go-btn {
+  float: left;
   background-color: #318FF5;
   color: #fff;
   width: 170px;
@@ -3413,6 +3270,7 @@ body {
 }
 
 .fixed-footer .bottom-control .back-btn {
+  float: left;
   border: 1px solid #318FF5;
   color: #318FF5;
   width: 170px;
@@ -3426,14 +3284,6 @@ body {
 
 .rulesWrap {
   margin-top: 30px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: -o-box;
-  display: -o-flex;
-  display: -moz-box;
-  display: -moz-flex;
-  display: flex;
   line-height: 20px;
 }
 
@@ -3450,6 +3300,7 @@ body {
 }
 
 .checkboxWrap {
+  float: left;
   width: 20px;
   height: 20px;
   position: relative;

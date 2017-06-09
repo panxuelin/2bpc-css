@@ -25,21 +25,28 @@ body {
     font-size: 24px;
     color: $sz-color-gray;
     margin: 0 auto;
-    @include flexbox;
-    @include align($justify-content: flex-start);
+    //@include flexbox;
+    //@include align($justify-content: flex-start);
     .logo {
+      float: left;
+      margin-top: 15px;
       height: 50px;
     }
     .right {
-      @include flex;
-      @include flexbox;
-      @include align($justify-content: flex-end);
+      //@include flex;
+      //@include flexbox;
+      //@include align($justify-content: flex-end);
+      float:right;
+      margin-top: 10px;
       height: 60px;
       .barcode {
+        float: left;
         height: 60px;
         width: 60px;
       }
       .words {
+        margin-top: 6px;
+        float: left;
         line-height: 24px;
         margin-left: 20px;
         font-size: 14px;
@@ -124,25 +131,28 @@ body {
           float: left;
           margin-left: 30px;
           margin-bottom: 10px;
-          @include align($justify-content: flex-start);
+          //@include align($justify-content: flex-start);
           .icon {
+            float:left;
             width: 20px;
             height: 20px;
             margin-right: 10px;
           }
           > span {
-            display: inline-block;
-            width: 120px;
+            //display: inline-block;
+            float:left;
+            width: 115px;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            line-height: 20px;
           }
         }
       }
     }
   }
   .nav-control {
-    @include flexbox;
+    //@include flexbox;
     margin-top: 15px;
     margin-bottom: 20px;
     height: 51px;
@@ -151,6 +161,7 @@ body {
     color: $sz-color-gray;
     border-bottom: 1px solid $sz-border-color-gray;
     .item {
+      float:left;
       margin-left: 50px;
       height: 50px;
       line-height: 50px;
@@ -232,8 +243,10 @@ body {
   }
   .btn-control{
     margin-top: 30px;
-    @include flexbox;
+    //@include flexbox;
+    overflow: hidden;
     .go-btn {
+      float: left;
       background-color: $primaryColor;
       color: #fff;
       width: 170px;
@@ -244,6 +257,7 @@ body {
       cursor: pointer;
     }
     .back-btn {
+      float: left;
       border: 1px solid $primaryColor;
       color: $primaryColor;
       width: 170px;
@@ -289,13 +303,16 @@ body {
       }
     }
     .top {
-      @include align($justify-content: flex-start);
+      //@include align($justify-content: flex-start);
+      overflow: hidden;
       .name {
+        float: left;
         font-size: 20px;
         height: 24px;
         line-height: 24px;
       }
       .rule {
+        float: left;
         margin-left: 10px;
         height: 24px;
         line-height: 24px;
@@ -438,10 +455,12 @@ body {
   padding: 15px 0;
   z-index: 1100;
   .bottom-control {
-    @include flexbox;
+    //@include flexbox;
     height: 50px;
     .info {
-      @include flex;
+      //@include flex;
+      float: left;
+      width:770px;
       text-align: right;
       font-size: 16px;
       height: 50px;
@@ -459,6 +478,7 @@ body {
       }
     }
     .go-btn {
+      float: left;
       background-color: $primaryColor;
       color: #fff;
       width: 170px;
@@ -469,6 +489,7 @@ body {
       cursor: pointer;
     }
     .back-btn {
+      float: left;
       border: 1px solid $primaryColor;
       color: $primaryColor;
       width: 170px;
@@ -484,7 +505,7 @@ body {
 }
 .rulesWrap{
   margin-top: 30px;
-  @include flexbox;
+  //@include flexbox;
   line-height: 20px;
   .info{
     margin-left: 5px;
@@ -499,6 +520,7 @@ body {
   overflow-y: auto;
 }
 .checkboxWrap{
+  float:left;
   width:20px;
   height:20px;
   position: relative;

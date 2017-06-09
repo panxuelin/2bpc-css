@@ -25,21 +25,28 @@ body {
     font-size: 24px;
     color: $sz-color-gray;
     margin: 0 auto;
-    @include flexbox;
-    @include align($justify-content: flex-start);
+    //@include flexbox;
+    //@include align($justify-content: flex-start);
     .logo {
+      float: left;
+      margin-top: 15px;
       height: 50px;
     }
     .right {
-      @include flex;
-      @include flexbox;
-      @include align($justify-content: flex-end);
+      //@include flex;
+      //@include flexbox;
+      //@include align($justify-content: flex-end);
+      float:right;
+      margin-top: 10px;
       height: 60px;
       .barcode {
+        float: left;
         height: 60px;
         width: 60px;
       }
       .words {
+        margin-top: 6px;
+        float: left;
         line-height: 24px;
         margin-left: 20px;
         font-size: 14px;
@@ -58,14 +65,20 @@ body {
   background-color: #fff;
   padding-bottom: 80px;
   .user-info{
-    @include flexbox;
-    @include align($justify-content:flex-start);
+    //@include flexbox;
+    //@include align($justify-content:flex-start);
     margin-bottom: 30px;
+    overflow: hidden;
     .name{
+      float: left;
+      line-height: 28px;
       font-size: 20px;
       margin-right:20px;
     }
     .title{
+      float: left;
+      margin-top: 4px;
+      line-height: 20px;
       font-size:14px;
       color:$sz-color-gray;
     }
@@ -79,6 +92,7 @@ body {
 
   }
   .card-control{
+    height:240px;
     margin-top: 24px;
     position:relative;
     border:1px solid $sz-border-color-gray;
@@ -138,7 +152,8 @@ body {
     margin-top: 24px;
     height:240px;
     border:1px solid $sz-border-color-gray;
-    @include align;
+    padding-top:84px;
+    //@include align;
 
   }
   .formerly{

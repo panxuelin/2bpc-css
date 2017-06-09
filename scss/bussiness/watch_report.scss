@@ -25,21 +25,28 @@ body {
     font-size: 24px;
     color: $sz-color-gray;
     margin: 0 auto;
-    @include flexbox;
-    @include align($justify-content: flex-start);
+    //@include flexbox;
+    //@include align($justify-content: flex-start);
     .logo {
+      float: left;
+      margin-top: 15px;
       height: 50px;
     }
     .right {
-      @include flex;
-      @include flexbox;
-      @include align($justify-content: flex-end);
+      //@include flex;
+      //@include flexbox;
+      //@include align($justify-content: flex-end);
+      float:right;
+      margin-top: 10px;
       height: 60px;
       .barcode {
+        float: left;
         height: 60px;
         width: 60px;
       }
       .words {
+        margin-top: 6px;
+        float: left;
         line-height: 24px;
         margin-left: 20px;
         font-size: 14px;
@@ -49,6 +56,7 @@ body {
 
   }
 }
+
 
 .sz-progress {
   margin-top: 80px;
@@ -127,12 +135,16 @@ body {
       }
     }
     .right {
-      @include align;
+      //@include align;
+      overflow: hidden;
       .big-barcode {
+        float: left;
         width: 150px;
         height: 150px;
       }
       .words {
+        float: left;
+        margin-top: 40px;
         margin-left: 15px;
         font-size: 20px;
         line-height: 35px;
@@ -152,14 +164,18 @@ body {
       color:$sz-color-gray;
       font-size: 16px;
       line-height: 20px;
-      @include flexbox;
+      //@include flexbox;
+      overflow: hidden;
       .name{
         width:90px;
         margin-right: 10px;
+        float:left;
       }
       .desc{
-        @include flex;
+        //@include flex;
+        float: left;
       }
+
     }
   }
 }

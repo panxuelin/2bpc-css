@@ -25,21 +25,28 @@ body {
     font-size: 24px;
     color: $sz-color-gray;
     margin: 0 auto;
-    @include flexbox;
-    @include align($justify-content: flex-start);
+    //@include flexbox;
+    //@include align($justify-content: flex-start);
     .logo {
+      float: left;
+      margin-top: 15px;
       height: 50px;
     }
     .right {
-      @include flex;
-      @include flexbox;
-      @include align($justify-content: flex-end);
+      //@include flex;
+      //@include flexbox;
+      //@include align($justify-content: flex-end);
+      float:right;
+      margin-top: 10px;
       height: 60px;
       .barcode {
+        float: left;
         height: 60px;
         width: 60px;
       }
       .words {
+        margin-top: 6px;
+        float: left;
         line-height: 24px;
         margin-left: 20px;
         font-size: 14px;
