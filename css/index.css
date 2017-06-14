@@ -2859,6 +2859,10 @@ body {
   cursor: pointer;
 }
 
+.sz-body .card-control .disable {
+  background-color: #959da7;
+}
+
 .sz-body .card-control:after {
   position: absolute;
   right: -5px;
