@@ -20,13 +20,14 @@ $sz-color-gray: #5f6681;
     font-size: 20px;
     margin-right: 34px;
     line-height: 80px;
+    font-size: 14px;
     color: #fff;
   }
   .shan-header-company-logo {
     float: right;
-    height: 40px;
-    margin-right: 68px;
-    margin-top: 20px;
+    height: 60px;
+    margin-right: 15px;
+    margin-top: 10px;
   }
 }
 
@@ -76,12 +77,6 @@ $sz-color-gray: #5f6681;
     }
   }
   .shan-main {
-    //position:fixed;
-    //left:160px;
-    //top:80px;
-    //height:100%;
-    //width: 100%;
-    //float:left;
     min-height: 566px;
     background-color: #eff0f4;
     margin-left: 160px;
@@ -125,7 +120,6 @@ $sz-color-gray: #5f6681;
 
       }
       .module{
-
         list-style: none;
         >li{
           float:left;
@@ -178,6 +172,22 @@ font-size: 24px;
             }
           }
         }
+        &.disabled{
+          >li{
+            cursor:default;
+            &:hover{
+              box-shadow: 0px 1px 5px 0.1px #e5e5e5;
+              -moz-box-shadow: 0px 1px 5px 0.1px #e5e5e5;
+              -webkit-box-shadow: 0px 1px 5px 0.1px #e5e5e5;
+            }
+            .name{
+              &:after{
+                width:0px;
+                height:0px;
+              }
+            }
+          }
+        }
       }
       .paging{
         float:right;
@@ -212,11 +222,11 @@ font-size: 24px;
           overflow: hidden;
           list-style: none;
           padding-left:0;
-          margin-left: -30px;
+          margin-left: -20px;
           >li{
             float: left;
-            width:135px;
-            margin-left: 30px;
+            width:150px;
+            margin-left: 20px;
             .name{
               color:$sz-color-black;
               line-height: 20px;
@@ -227,20 +237,21 @@ font-size: 24px;
               background-color: $sz-color-blue;
               color:#fff;
               width:100%;
-              height:50px;
-              line-height: 50px;
+              height:34px;
+              line-height: 34px;
               text-align: center;
               vertical-align: middle;
               font-size: 0;
               border-radius: 4px;
+              cursor:pointer;
               >span{
                 vertical-align: middle;
                 font-size: 14px;
               }
             }
-            .form-control{
-              height: 50px;
-              padding: 14px 12px;
+            &.search-btn-li{
+              width:110px;
+
             }
           }
         }
@@ -274,6 +285,78 @@ font-size: 24px;
           }
         }
 
+      }
+      .company-chance{
+        margin-bottom: 10px;
+        border-bottom: 1px solid $sz-border-color-gray;
+        .company-chance-ul{
+          overflow: hidden;
+          list-style: none;
+          margin-top: 30px;
+          margin-left: -30px;
+          margin-bottom: 10px;
+          padding-left: 0;
+          >li{
+            margin-bottom: 20px;
+            float: left;
+            margin-left: 30px;
+            .name{
+              float: left;
+              width:70px;
+              line-height: 34px;
+              margin-right: 20px;
+            }
+            .info{
+              float:left;
+              width:200px;
+              color:$sz-color-gray;
+            }
+            .search-btn{
+              background-color: $sz-color-blue;
+              color:#fff;
+              width:100%;
+              height:34px;
+              line-height: 34px;
+              text-align: center;
+              vertical-align: middle;
+              font-size: 0;
+              border-radius: 4px;
+              cursor:pointer;
+              >span{
+                vertical-align: middle;
+                font-size: 14px;
+              }
+            }
+            &.search-btn-li{
+              width:110px;
+            }
+          }
+          &.personnel{
+            >li{
+              .info{
+                width:170px;
+              }
+            }
+          }
+        }
+      }
+      .company_url{
+        color:$sz-color-blue;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      .more-btn{
+        line-height: 40px;
+        text-align: center;
+        color:$sz-color-gray;
+        cursor:pointer;
+      }
+      .page-total{
+        float: left;
+        line-height: 40px;
+        height:40px;
+        color:$sz-color-gray;
       }
     }
   }
@@ -370,6 +453,88 @@ font-size: 24px;
       }
     }
   }
+  .shan-modal{
+    margin-top: 70px;
+    width:860px;
+    color:$sz-color-gray;
+    .change-person-ul{
+      list-style: none;
+      overflow: hidden;
+      >li{
+        float:left;
+        margin-top: 20px;
+        .name{
+          float:left;
+          color:$sz-color-black;
+          width:120px;
+          text-align: right;
+          line-height: 34px;
+          margin-right: 20px;
+        }
+        .info{
+          float:left;
+          width:200px;
+        }
+        .tips{
+          float:left;
+          width:250px;
+          margin-left: -50px;
+          font-size: 12px;
+        }
+      }
+    }
+    .close-btn{
+      width:170px;
+      height: 50px;
+      line-height: 50px;
+      display: inline-block;
+      border: 1px solid $sz-border-color-gray;
+      border-radius: 4px;
+      color:$sz-color-gray;
+      cursor: pointer;
+    }
+    .ok-btn{
+      width:170px;
+      height: 50px;
+      line-height: 50px;
+      display: inline-block;
+      border: 1px solid $sz-border-color-gray;
+      border-radius: 4px;
+      color:#fff;
+      background-color: $sz-color-blue;
+      cursor: pointer;
+    }
+    .remark-textarea-box{
+      position: relative;
+      .remark-textarea{
+        height:100px;
+        resize: none;
+      }
+      .remark-textarea-remain{
+        position:absolute;
+        bottom:3px;
+        right:150px;
+        height:40px;
+        line-height: 40px;
+        color:$sz-color-minus-gray;
+      }
+      .btn-group{
+        position: absolute;
+        bottom:3px;
+        right:3px;
+        width:129px;
+        height:40px;
+        line-height: 40px;
+        background-color: #f9f9f9;
+        color:$sz-color-gray;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+    &.confirm{
+      width:450px;
+    }
+  }
 }
 
 .table{
@@ -378,3 +543,12 @@ font-size: 24px;
     text-align: center;
   }
 }
+
+.mt70{
+  margin-top: 70px!important;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+  vertical-align: middle;
+}
+

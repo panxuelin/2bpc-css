@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords" content="善诊 健康 老年人体检">
+    <meta name="description" content="">
+    <meta name="author" content="善诊">
+    <link type="image/x-icon" rel="shortcut icon" href="../../images/favicon.ico">
+
+    <title>善诊管理平台</title>
+
+    <!--&lt;!&ndash;icheck&ndash;&gt;-->
+    <!--<link href="/js/lib/iCheck/skins/square/green.css" rel="stylesheet">-->
+    <!--<link href="/js/lib/iCheck/skins/flat/green.css" rel="stylesheet">-->
+
+    <!--&lt;!&ndash;pickers css&ndash;&gt;-->
+    <!--<link href="/js/lib/bootstrap-datepicker/css/datepicker.css" rel="stylesheet">-->
+
+
+    <!--&lt;!&ndash;dashboard calendar&ndash;&gt;-->
+    <!--<link href="../../css/clndr.css" rel="stylesheet">-->
+
+
+    <!--common-->
+    <!--<link href="../../css/style.css" rel="stylesheet">-->
+    <!--<link href="../../css/style-responsive.css" rel="stylesheet">-->
+    <!--<link href="../../css/custom.css" rel="stylesheet">-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap-table.min.css" rel="stylesheet">
+    <!--page-->
+    <link href="../../css/auth.css" rel="stylesheet">
+
+    <script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap-table.js"></script>
+
+</head>
+
+<body>
+
+<header class="shan-header">
+    <img src="../../images/auth/logo.png" class="shan-header-logo">
+    <div class="shan-header-username">用户名</div>
+    <img src="../../images/auth/logo_zbj2.png" class="shan-header-company-logo">
+</header>
+<div class="shan-body">
+    <div class="shan-left">
+        <div class="shan-left-section">
+            <div class="name">业务中心</div>
+            <a class="item "><span class="glyphicon glyphicon-minus f10 mr10" aria-hidden="true"></span>公司列表</a>
+            <a class="item item-on"><span class="glyphicon glyphicon-minus f10 mr10" aria-hidden="true"></span>员工管理</a>
+        </div>
+    </div>
+    <div class="shan-main">
+        <div class="shan-main-box">
+            <div class="company">
+                <img src="../../images/auth/icon_personnel.png" class="icon">
+                <span class="fl">员工管理</span>
+                <span class="fl glyphicon glyphicon-minus f12 mt6 ml20 mr5" aria-hidden="true"></span>
+                <span class="fl f14 ">搜索员工信息</span>
+            </div>
+            <div class="company-chance">
+                <ul class="company-chance-ul personnel">
+                    <li>
+                        <label class="name">员工姓名</label>
+                        <div class="info">
+                            <input type="text" class="form-control">
+                        </div>
+                    </li>
+                    <li>
+                        <label class="name">证件号码</label>
+                        <div class="info">
+                            <input type="text" class="form-control">
+                        </div>
+                    </li>
+                    <li>
+                        <label class="name">手机号码</label>
+                        <div class="info">
+                            <input type="text" class="form-control">
+                        </div>
+                    </li>
+                    <li>
+                        <label class="name">员工性别</label>
+                        <div class="info">
+                            <select class="form-control">
+                                <option>男</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="name">公司名称</label>
+                        <div class="info">
+                            <input type="text" class="form-control">
+                        </div>
+                    </li>
+                    <li>
+                        <label class="name">所在部门</label>
+                        <div class="info">
+                            <input type="text" class="form-control">
+                        </div>
+                    </li>
+                    <li>
+                        <label class="name">体检城市</label>
+                        <div class="info">
+                            <select class="form-control">
+                                <option>男</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="name">体检机构</label>
+                        <div class="info">
+                            <input type="text" class="form-control">
+                        </div>
+                    </li>
+                    <li>
+                        <label class="name">预约状态</label>
+                        <div class="info">
+                            <select class="form-control">
+                                <option>男</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="name">体检开始</label>
+                        <div class="info">
+                            <select class="form-control">
+                                <option>男</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="name">体检结束</label>
+                        <div class="info">
+                            <select class="form-control">
+                                <option>男</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="search-btn-li">
+                        <div class="search-btn">
+                            <span class="glyphicon glyphicon-search f14 mr10"></span>
+                            <span>搜索</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="more-btn">
+                查看更多搜索条件
+                <span class="glyphicon glyphicon-chevron-down ml10 f12"></span>
+            </div>
+        </div>
+        <!--员工 start-->
+        <div class="shan-main-box">
+            <div class="title yellow">
+                搜索结果
+            </div>
+
+            <table id="" class="mt25 table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>证件号</th>
+                    <th>手机号</th>
+                    <th>体检活动</th>
+                    <th>部门</th>
+                    <th>体检日期/状态</th>
+                    <th>操作</th>
+                </tr>
+
+                </thead>
+                <tbody>
+                <tr>
+                    <td>赵徳汉</td>
+                    <td>360726000000000001</td>
+                    <td>13800000001</td>
+                    <td>2017_标准企业年检_尊享套餐</td>
+                    <td>总裁办</td>
+                    <td>2017/05/28<br>未预约</td>
+                    <td>
+                        <span class="change-btn mr10" data-toggle="modal" data-target="#myModal">修改</span>
+                        <span class="del-btn" data-toggle="modal" data-target="#myConfirmModal">删除</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>赵徳汉</td>
+                    <td>360726000000000001</td>
+                    <td>13800000001</td>
+                    <td>2017_标准企业年检_尊享套餐</td>
+                    <td>总裁办</td>
+                    <td>2017/05/28<br>未预约</td>
+                    <td>
+                        <span class="change-btn mr10" data-toggle="modal" data-target="#myModal">修改</span>
+                        <span class="del-btn" data-toggle="modal" data-target="#myConfirmModal">删除</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>赵徳汉</td>
+                    <td>360726000000000001</td>
+                    <td>13800000001</td>
+                    <td>2017_标准企业年检_尊享套餐</td>
+                    <td>总裁办</td>
+                    <td>2017/05/28<br><span class="text-green">已预约</span></td>
+                    <td>
+                        <span class="change-btn  " data-toggle="modal" data-target="#myRemarkModal">已备注</span>
+
+                    </td>
+                </tr>
+                </tbody>
+
+            </table>
+            <div class="page-total">共 300 条信息</div>
+            <ul class="paging">
+                <li class="left"><span class="glyphicon glyphicon-triangle-left"></span></li>
+                <li class="item-on">1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li class="right"><span class="glyphicon glyphicon-triangle-right"></span></li>
+            </ul>
+        </div>
+        <!--员工 end-->
+    </div>
+    <!--modal-->
+    <div class="modal fade in mt70 " tabindex="-1" role="dialog"  id="myModal">
+        <div class="modal-dialog shan-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title tc">修改员工信息</h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="change-person-ul">
+                        <li>
+                            <label class="name">体检人</label>
+                            <div class="info">
+                                <input type="text" autocomplete="off" class="form-control">
+                            </div>
+
+                        </li>
+                        <li>
+                            <label class="name">手机号码</label>
+                            <div class="info">
+                            <input type="text" maxlength="11" autocomplete="off" class="form-control">
+                                </div>
+                        </li>
+                        <li>
+                          <label class="name">证件类型</label>
+                            <div class="info">
+                            <select class="form-control">
+                                <option>身份证</option>
+                            </select>
+                                </div>
+                        </li>
+                        <li>
+                            <label class="name">证件号</label>
+                            <div class="info">
+                            <input type="text" class="form-control">
+                                </div>
+                        </li>
+                        <li>
+                            <label class="name">性别</label>
+                            <div class="info">
+                            <select class="form-control">
+                                <option>身份证</option>
+                            </select>
+                                </div>
+                        </li>
+                        <li>
+                            <label class="name">部门</label>
+                            <div class="info">
+                            <select class="form-control">
+                                <option>总裁办</option>
+                            </select>
+                                </div>
+                        </li>
+                       <li>
+                           <label class="name"></label>
+                           <div class="tips">
+                               <span class="text-blue mr5">*</span>为了保护您的安全与隐私，未婚状态下不包含妇科检查项。若您仍需做妇科检查，请选择“已婚女”，或咨询客服。
+                           </div>
+
+                       </li>
+                    </ul>
+                </div>
+                <div class="modal-footer tc">
+                    <div class="close-btn mr40" data-dismiss="modal">取消</div>
+                    <div  class=" ok-btn">保存</div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!--remarkmodal-->
+    <div class="modal fade in mt70 " tabindex="-1" role="dialog"  id="myRemarkModal">
+        <div class="modal-dialog shan-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title tc">备注</h4>
+                </div>
+                <div class="modal-body">
+                    <table id="" class="mt25 table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                            <th>备注信息</th>
+                            <th>备注时间</th>
+                            <th>性质</th>
+                            <th>备注人</th>
+                        </tr>
+
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>赵徳汉</td>
+                            <td>2017/05/07</td>
+                            <td>公开</td>
+                            <td>用户名</td>
+                        </tr>
+                        <tr>
+                            <td>赵徳汉</td>
+                            <td>2017/05/07</td>
+                            <td>公开</td>
+                            <td>用户名</td>
+                        </tr>
+                        <tr>
+                            <td>赵徳汉</td>
+                            <td>2017/05/07</td>
+                            <td>公开</td>
+                            <td>用户名</td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+                    <div class="remark-textarea-box">
+                        <textarea maxlength="50" class="form-control remark-textarea" placeholder="请输入备注信息"></textarea>
+                        <div class="remark-textarea-remain">剩余50字</div>
+                        <div class="btn-group">
+                            <div data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Action <span class="caret"></span>
+                            </div>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer tc">
+                    <div class="close-btn mr40" data-dismiss="modal">取消</div>
+                    <div  class=" ok-btn">保存</div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!--confirmmodal-->
+    <div class="modal fade in mt70 " tabindex="-1" role="dialog"  id="myConfirmModal">
+        <div class="modal-dialog shan-modal confirm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title tc">删除</h4>
+                </div>
+                <div class="modal-body">
+                   <div class="tc">是否删除该条数据！</div>
+                </div>
+                <div class="modal-footer tc">
+                    <!--<div class="close-btn mr40" data-dismiss="modal">取消</div>-->
+                    <div  class=" ok-btn">是</div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $('.shan-left').css('height', $('.shan-main').outerHeight());
+    })
+</script>
+</body>
+
+</html>

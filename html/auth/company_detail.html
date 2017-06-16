@@ -42,7 +42,7 @@
 <header class="shan-header">
     <img src="../../images/auth/logo.png" class="shan-header-logo">
     <div class="shan-header-username">用户名</div>
-    <img src="../../images/auth/logo_zbj.png" class="shan-header-company-logo">
+    <img src="../../images/auth/logo_zbj2.png" class="shan-header-company-logo">
 </header>
 <div class="shan-body">
     <div class="shan-left">
@@ -72,7 +72,7 @@
                     <div class="num">3</div>
                     <div class="name">活动</div>
                 </li>
-                <li >
+                <li>
                     <div class="num">40</div>
                     <div class="name">今日体检</div>
                 </li>
@@ -85,7 +85,7 @@
         <!--活动 start-->
         <div class="shan-main-box hidden">
             <div class="title yellow">
-               各部门情况
+                各部门情况
             </div>
             <table class="mt25 table table-bordered table-striped">
                 <thead>
@@ -345,13 +345,13 @@
                     <li>
                         <div class="name"></div>
                         <div>
-                           <input type="text" class="form-control" placeholder="输入员工姓名">
+                            <input type="text" class="form-control" placeholder="输入员工姓名">
                         </div>
                     </li>
-                    <li>
+                    <li class="search-btn-li">
                         <div class="name"></div>
                         <div class="search-btn">
-                            <span class="glyphicon glyphicon-search f24 mr15"></span>
+                            <span class="glyphicon glyphicon-search f14 mr10"></span>
                             <span>搜索</span>
                         </div>
                     </li>
@@ -381,7 +381,7 @@
                     <td>总裁办</td>
                     <td>未预约</td>
                     <td>
-                        <span class="change-btn mr10">修改</span>
+                        <span class="change-btn mr10" data-toggle="modal" data-target="#myModal">修改</span>
                         <span class="del-btn">删除</span>
                     </td>
                 </tr>
@@ -393,7 +393,7 @@
                     <td>总裁办</td>
                     <td>未预约</td>
                     <td>
-                        <span class="change-btn mr10">修改</span>
+                        <span class="change-btn mr10" data-toggle="modal" data-target="#myModal">修改</span>
                         <span class="del-btn">删除</span>
                     </td>
                 </tr>
@@ -405,7 +405,7 @@
                     <td>总裁办</td>
                     <td class="text-green">已预约</td>
                     <td>
-                        <span class="change-btn mr10 disabled">修改</span>
+                        <span class="change-btn mr10 disabled" data-toggle="modal" data-target="#myModal">修改</span>
                         <span class="del-btn disabled">删除</span>
                     </td>
                 </tr>
@@ -424,11 +424,81 @@
         </div>
         <!--员工 end-->
     </div>
+    <!--modal-->
+    <div class="modal fade in mt70 " tabindex="-1" role="dialog"  id="myModal">
+        <div class="modal-dialog shan-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title tc">修改员工信息</h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="change-person-ul">
+                        <li>
+                            <label class="name">体检人</label>
+                            <div class="info">
+                                <input type="text" autocomplete="off" class="form-control">
+                            </div>
+
+                        </li>
+                        <li>
+                            <label class="name">手机号码</label>
+                            <div class="info">
+                            <input type="text" maxlength="11" autocomplete="off" class="form-control">
+                                </div>
+                        </li>
+                        <li>
+                          <label class="name">证件类型</label>
+                            <div class="info">
+                            <select class="form-control">
+                                <option>身份证</option>
+                            </select>
+                                </div>
+                        </li>
+                        <li>
+                            <label class="name">证件号</label>
+                            <div class="info">
+                            <input type="text" class="form-control">
+                                </div>
+                        </li>
+                        <li>
+                            <label class="name">性别</label>
+                            <div class="info">
+                            <select class="form-control">
+                                <option>身份证</option>
+                            </select>
+                                </div>
+                        </li>
+                        <li>
+                            <label class="name">部门</label>
+                            <div class="info">
+                            <select class="form-control">
+                                <option>总裁办</option>
+                            </select>
+                                </div>
+                        </li>
+                       <li>
+                           <label class="name"></label>
+                           <div class="tips">
+                               <span class="text-blue mr5">*</span>为了保护您的安全与隐私，未婚状态下不包含妇科检查项。若您仍需做妇科检查，请选择“已婚女”，或咨询客服。
+                           </div>
+
+                       </li>
+                    </ul>
+                </div>
+                <div class="modal-footer tc">
+                    <div class="close-btn mr40" data-dismiss="modal">取消</div>
+                    <div  class=" ok-btn">保存</div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 </div>
 
 <script type="text/javascript">
     $(function () {
-        $('.shan-left').css('height',$('.shan-main').outerHeight());
+        $('.shan-left').css('height', $('.shan-main').outerHeight());
     })
 </script>
 </body>

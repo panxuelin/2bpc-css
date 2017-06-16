@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords" content="善诊 健康 老年人体检">
+    <meta name="description" content="">
+    <meta name="author" content="善诊">
+    <link type="image/x-icon" rel="shortcut icon" href="../../images/favicon.ico">
+
+    <title>善诊管理平台</title>
+
+    <!--&lt;!&ndash;icheck&ndash;&gt;-->
+    <!--<link href="/js/lib/iCheck/skins/square/green.css" rel="stylesheet">-->
+    <!--<link href="/js/lib/iCheck/skins/flat/green.css" rel="stylesheet">-->
+
+    <!--&lt;!&ndash;pickers css&ndash;&gt;-->
+    <!--<link href="/js/lib/bootstrap-datepicker/css/datepicker.css" rel="stylesheet">-->
+
+
+    <!--&lt;!&ndash;dashboard calendar&ndash;&gt;-->
+    <!--<link href="../../css/clndr.css" rel="stylesheet">-->
+
+
+    <!--common-->
+    <!--<link href="../../css/style.css" rel="stylesheet">-->
+    <!--<link href="../../css/style-responsive.css" rel="stylesheet">-->
+    <!--<link href="../../css/custom.css" rel="stylesheet">-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap-table.min.css" rel="stylesheet">
+    <!--page-->
+    <link href="../../css/auth.css" rel="stylesheet">
+
+    <script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap-table.js"></script>
+
+</head>
+
+<body>
+
+<header class="shan-header">
+    <img src="../../images/auth/logo.png" class="shan-header-logo">
+    <div class="shan-header-username">用户名</div>
+    <img src="../../images/auth/logo_zbj2.png" class="shan-header-company-logo">
+</header>
+<div class="shan-body">
+    <div class="shan-left">
+        <div class="shan-left-section">
+            <div class="name">业务中心</div>
+            <a class="item item-on"><span class="glyphicon glyphicon-minus f10 mr10" aria-hidden="true"></span>公司列表</a>
+            <a class="item"><span class="glyphicon glyphicon-minus f10 mr10" aria-hidden="true"></span>员工管理</a>
+        </div>
+        <div class="shan-left-section">
+            <div class="name">业务中心</div>
+            <a class="item"><span class="glyphicon glyphicon-minus f10 mr10" aria-hidden="true"></span>公司详情</a>
+            <a class="item"><span class="glyphicon glyphicon-minus f10 mr10" aria-hidden="true"></span>员工管理</a>
+        </div>
+    </div>
+    <div class="shan-main">
+        <div class="shan-main-box">
+            <div class="company">
+                <img src="../../images/auth/icon_company.png" class="icon">
+                <span class="fl">公司列表</span>
+            </div>
+            <div class="company-chance">
+                <ul class="company-chance-ul">
+                    <li>
+                        <label class="name">筛选平台</label>
+                        <div class="info">
+                            <select class="form-control">
+                                <option>FA</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="name">活动状态</label>
+                        <div class="info">
+                            <select class="form-control">
+                                <option>活动进行中</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <ul class="module disabled clearfix">
+                <li class="">
+                    <div class="num">3</div>
+                    <div class="name">活动</div>
+                </li>
+                <li>
+                    <div class="num">40</div>
+                    <div class="name">今日体检</div>
+                </li>
+                <li>
+                    <div class="num">400</div>
+                    <div class="name">员工</div>
+                </li>
+            </ul>
+        </div>
+        <!--员工 start-->
+        <div class="shan-main-box">
+            <div class="search-box mt0">
+                <ul class="search-ul">
+                    <li>
+                        <div>
+                            <input type="text" class="form-control" placeholder="输入公司名字">
+                        </div>
+                    </li>
+                    <li class="search-btn-li">
+                        <div class="search-btn">
+                            <span class="glyphicon glyphicon-search f14 mr10"></span>
+                            <span>搜索</span>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+            <table id="" class="mt25 table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>公司</th>
+                    <th>活动数</th>
+                    <th>总人数</th>
+                    <th>预约数</th>
+                    <th>体检数</th>
+                    <th>到检率</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><a href="#" class="company_url">上海维跃科技信息有限公司</a></td>
+                    <td>3</td>
+                    <td>300</td>
+                    <td>240</td>
+                    <td>240</td>
+                    <td>80%</td>
+
+                </tr>
+                <tr>
+                    <td><a href="#" class="company_url">上海维跃科技信息有限公司</a></td>
+                    <td>3</td>
+                    <td>300</td>
+                    <td>240</td>
+                    <td>240</td>
+                    <td>80%</td>
+
+                </tr>
+                <tr>
+                    <td><a href="#" class="company_url">上海维跃科技信息有限公司</a></td>
+                    <td>3</td>
+                    <td>300</td>
+                    <td>240</td>
+                    <td>240</td>
+                    <td>80%</td>
+
+                </tr>
+                <tr>
+                    <td><a href="#" class="company_url">上海维跃科技信息有限公司</a></td>
+                    <td>3</td>
+                    <td>300</td>
+                    <td>240</td>
+                    <td>240</td>
+                    <td>80%</td>
+
+                </tr>
+                </tbody>
+
+            </table>
+            <ul class="paging">
+                <li class="left"><span class="glyphicon glyphicon-triangle-left"></span></li>
+                <li class="item-on">1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li class="right"><span class="glyphicon glyphicon-triangle-right"></span></li>
+            </ul>
+        </div>
+        <!--员工 end-->
+    </div>
+    <!--modal-->
+    <div class="modal fade in mt70 " tabindex="-1" role="dialog"  id="myModal">
+        <div class="modal-dialog shan-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title tc">修改员工信息</h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="change-person-ul">
+                        <li>
+                            <label class="name">体检人</label>
+                            <div class="info">
+                                <input type="text" autocomplete="off" class="form-control">
+                            </div>
+
+                        </li>
+                        <li>
+                            <label class="name">手机号码</label>
+                            <div class="info">
+                            <input type="text" maxlength="11" autocomplete="off" class="form-control">
+                                </div>
+                        </li>
+                        <li>
+                          <label class="name">证件类型</label>
+                            <div class="info">
+                            <select class="form-control">
+                                <option>身份证</option>
+                            </select>
+                                </div>
+                        </li>
+                        <li>
+                            <label class="name">证件号</label>
+                            <div class="info">
+                            <input type="text" class="form-control">
+                                </div>
+                        </li>
+                        <li>
+                            <label class="name">性别</label>
+                            <div class="info">
+                            <select class="form-control">
+                                <option>身份证</option>
+                            </select>
+                                </div>
+                        </li>
+                        <li>
+                            <label class="name">部门</label>
+                            <div class="info">
+                            <select class="form-control">
+                                <option>总裁办</option>
+                            </select>
+                                </div>
+                        </li>
+                       <li>
+                           <label class="name"></label>
+                           <div class="tips">
+                               <span class="text-blue mr5">*</span>为了保护您的安全与隐私，未婚状态下不包含妇科检查项。若您仍需做妇科检查，请选择“已婚女”，或咨询客服。
+                           </div>
+
+                       </li>
+                    </ul>
+                </div>
+                <div class="modal-footer tc">
+                    <div class="close-btn mr40" data-dismiss="modal">取消</div>
+                    <div  class=" ok-btn">保存</div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $('.shan-left').css('height', $('.shan-main').outerHeight());
+    })
+</script>
+</body>
+
+</html>

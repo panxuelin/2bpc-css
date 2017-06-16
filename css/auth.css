@@ -2760,14 +2760,15 @@ input:-moz-placeholder {
   font-size: 20px;
   margin-right: 34px;
   line-height: 80px;
+  font-size: 14px;
   color: #fff;
 }
 
 .shan-header .shan-header-company-logo {
   float: right;
-  height: 40px;
-  margin-right: 68px;
-  margin-top: 20px;
+  height: 60px;
+  margin-right: 15px;
+  margin-top: 10px;
 }
 
 .shan-body {
@@ -2933,6 +2934,21 @@ input:-moz-placeholder {
   background-image: url(../images/auth/icon_up.png);
 }
 
+.shan-body .shan-main .shan-main-box .module.disabled > li {
+  cursor: default;
+}
+
+.shan-body .shan-main .shan-main-box .module.disabled > li:hover {
+  box-shadow: 0px 1px 5px 0.1px #e5e5e5;
+  -moz-box-shadow: 0px 1px 5px 0.1px #e5e5e5;
+  -webkit-box-shadow: 0px 1px 5px 0.1px #e5e5e5;
+}
+
+.shan-body .shan-main .shan-main-box .module.disabled > li .name:after {
+  width: 0px;
+  height: 0px;
+}
+
 .shan-body .shan-main .shan-main-box .paging {
   float: right;
   list-style: none;
@@ -2971,13 +2987,13 @@ input:-moz-placeholder {
   overflow: hidden;
   list-style: none;
   padding-left: 0;
-  margin-left: -30px;
+  margin-left: -20px;
 }
 
 .shan-body .shan-main .shan-main-box .search-box .search-ul > li {
   float: left;
-  width: 135px;
-  margin-left: 30px;
+  width: 150px;
+  margin-left: 20px;
 }
 
 .shan-body .shan-main .shan-main-box .search-box .search-ul > li .name {
@@ -2991,12 +3007,13 @@ input:-moz-placeholder {
   background-color: #318FF5;
   color: #fff;
   width: 100%;
-  height: 50px;
-  line-height: 50px;
+  height: 34px;
+  line-height: 34px;
   text-align: center;
   vertical-align: middle;
   font-size: 0;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .shan-body .shan-main .shan-main-box .search-box .search-ul > li .search-btn > span {
@@ -3004,9 +3021,8 @@ input:-moz-placeholder {
   font-size: 14px;
 }
 
-.shan-body .shan-main .shan-main-box .search-box .search-ul > li .form-control {
-  height: 50px;
-  padding: 14px 12px;
+.shan-body .shan-main .shan-main-box .search-box .search-ul > li.search-btn-li {
+  width: 110px;
 }
 
 .shan-body .shan-main .shan-main-box .change-btn {
@@ -3043,6 +3059,87 @@ input:-moz-placeholder {
 
 .shan-body .shan-main .shan-main-box .del-btn.disabled:hover {
   text-decoration: none;
+}
+
+.shan-body .shan-main .shan-main-box .company-chance {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.shan-body .shan-main .shan-main-box .company-chance .company-chance-ul {
+  overflow: hidden;
+  list-style: none;
+  margin-top: 30px;
+  margin-left: -30px;
+  margin-bottom: 10px;
+  padding-left: 0;
+}
+
+.shan-body .shan-main .shan-main-box .company-chance .company-chance-ul > li {
+  margin-bottom: 20px;
+  float: left;
+  margin-left: 30px;
+}
+
+.shan-body .shan-main .shan-main-box .company-chance .company-chance-ul > li .name {
+  float: left;
+  width: 70px;
+  line-height: 34px;
+  margin-right: 20px;
+}
+
+.shan-body .shan-main .shan-main-box .company-chance .company-chance-ul > li .info {
+  float: left;
+  width: 200px;
+  color: #5f6681;
+}
+
+.shan-body .shan-main .shan-main-box .company-chance .company-chance-ul > li .search-btn {
+  background-color: #318FF5;
+  color: #fff;
+  width: 100%;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.shan-body .shan-main .shan-main-box .company-chance .company-chance-ul > li .search-btn > span {
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.shan-body .shan-main .shan-main-box .company-chance .company-chance-ul > li.search-btn-li {
+  width: 110px;
+}
+
+.shan-body .shan-main .shan-main-box .company-chance .company-chance-ul.personnel > li .info {
+  width: 170px;
+}
+
+.shan-body .shan-main .shan-main-box .company_url {
+  color: #318FF5;
+}
+
+.shan-body .shan-main .shan-main-box .company_url:hover {
+  text-decoration: underline;
+}
+
+.shan-body .shan-main .shan-main-box .more-btn {
+  line-height: 40px;
+  text-align: center;
+  color: #5f6681;
+  cursor: pointer;
+}
+
+.shan-body .shan-main .shan-main-box .page-total {
+  float: left;
+  line-height: 40px;
+  height: 40px;
+  color: #5f6681;
 }
 
 .shan-body .shan-login {
@@ -3154,10 +3251,113 @@ input:-moz-placeholder {
   color: #bbb;
 }
 
+.shan-body .shan-modal {
+  margin-top: 70px;
+  width: 860px;
+  color: #5f6681;
+}
+
+.shan-body .shan-modal .change-person-ul {
+  list-style: none;
+  overflow: hidden;
+}
+
+.shan-body .shan-modal .change-person-ul > li {
+  float: left;
+  margin-top: 20px;
+}
+
+.shan-body .shan-modal .change-person-ul > li .name {
+  float: left;
+  color: #222;
+  width: 120px;
+  text-align: right;
+  line-height: 34px;
+  margin-right: 20px;
+}
+
+.shan-body .shan-modal .change-person-ul > li .info {
+  float: left;
+  width: 200px;
+}
+
+.shan-body .shan-modal .change-person-ul > li .tips {
+  float: left;
+  width: 250px;
+  margin-left: -50px;
+  font-size: 12px;
+}
+
+.shan-body .shan-modal .close-btn {
+  width: 170px;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #5f6681;
+  cursor: pointer;
+}
+
+.shan-body .shan-modal .ok-btn {
+  width: 170px;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #318FF5;
+  cursor: pointer;
+}
+
+.shan-body .shan-modal .remark-textarea-box {
+  position: relative;
+}
+
+.shan-body .shan-modal .remark-textarea-box .remark-textarea {
+  height: 100px;
+  resize: none;
+}
+
+.shan-body .shan-modal .remark-textarea-box .remark-textarea-remain {
+  position: absolute;
+  bottom: 3px;
+  right: 150px;
+  height: 40px;
+  line-height: 40px;
+  color: #d5d7d9;
+}
+
+.shan-body .shan-modal .remark-textarea-box .btn-group {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  width: 129px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #f9f9f9;
+  color: #5f6681;
+  text-align: center;
+  cursor: pointer;
+}
+
+.shan-body .shan-modal.confirm {
+  width: 450px;
+}
+
 .table {
   color: #5f6681;
 }
 
 .table th, .table td {
   text-align: center;
+}
+
+.mt70 {
+  margin-top: 70px !important;
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+  vertical-align: middle;
 }
