@@ -125,6 +125,7 @@ body{
       }
       .module{
         list-style: none;
+        padding-left: 0;
         >li{
           float:left;
           width: 180px;
@@ -219,6 +220,41 @@ font-size: 24px;
           }
         }
 
+      }
+      .pagination{
+        float:right;
+        margin: 0;
+        >ul{
+          list-style: none;
+          >li{
+            float: left;
+            margin-left:8px ;
+            width: 40px;
+            height: 40px;
+            line-height: 36px;
+            border-radius: 4px;
+            background-color: #ffffff;
+            border: solid 2px $sz-border-color-gray;
+            color:$sz-color-gray;
+            font-size: 14px;
+            text-align: center;
+            cursor:pointer;
+            &.active{
+              border-color:$sz-color-blue;
+              color:$sz-color-blue;
+            }
+            &:hover{
+              border-color:$sz-color-blue;
+              color:$sz-color-blue;
+            }
+            a{
+              color:$sz-color-gray;
+              &:hover{
+                text-decoration: none;
+              }
+            }
+          }
+        }
       }
       .search-box{
         margin-top:30px;
