@@ -2740,6 +2740,10 @@ input:-moz-placeholder {
   color: #bbb;
 }
 
+body {
+  background-color: #eff0f4;
+}
+
 .shan-header {
   position: fixed;
   left: 0;
