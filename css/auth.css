@@ -3360,7 +3360,7 @@ body {
 }
 
 .shan-body .shan-modal .remark-table-box {
-  height: 224px;
+  max-height: 224px;
   overflow: auto;
 }
 

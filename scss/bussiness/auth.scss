@@ -546,7 +546,7 @@ font-size: 24px;
       cursor: pointer;
     }
     .remark-table-box{
-      height: 224px;
+      max-height: 224px;
       overflow: auto;
     }
     .remark-textarea-box{
