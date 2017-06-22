@@ -545,6 +545,10 @@ font-size: 24px;
       background-color: $sz-color-blue;
       cursor: pointer;
     }
+    .remark-table-box{
+      height: 224px;
+      overflow: auto;
+    }
     .remark-textarea-box{
       position: relative;
       .remark-textarea{

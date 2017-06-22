@@ -3359,6 +3359,11 @@ body {
   cursor: pointer;
 }
 
+.shan-body .shan-modal .remark-table-box {
+  height: 224px;
+  overflow: auto;
+}
+
 .shan-body .shan-modal .remark-textarea-box {
   position: relative;
 }
