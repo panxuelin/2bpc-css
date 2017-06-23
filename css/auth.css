@@ -2766,6 +2766,7 @@ body {
   line-height: 80px;
   font-size: 14px;
   color: #fff;
+  cursor: pointer;
 }
 
 .shan-header .shan-header-company-logo {
