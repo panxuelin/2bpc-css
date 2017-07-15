@@ -273,6 +273,9 @@ body {
 
 .view-control {
   margin-bottom: 70px;
+  .pkg-img-detail{
+    width: 100%;
+  }
   .pkg-detail {
     border-top: 2px solid $primaryColor;
     border-collapse: collapse;
