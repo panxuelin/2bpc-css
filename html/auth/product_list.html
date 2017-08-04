@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="keywords" content="善诊 健康 老年人体检">
+    <meta name="description" content="">
+    <meta name="author" content="善诊">
+    <link type="image/x-icon" rel="shortcut icon" href="../../images/favicon.ico">
+    <title>善诊管理平台</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap-table.min.css" rel="stylesheet">
+    <!--page-->
+    <link href="../../css/auth.css" rel="stylesheet">
+
+    <script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap-table.js"></script>
+
+</head>
+
+<body>
+
+<header class="shan-header">
+    <img src="../../images/auth/logo.png" class="shan-header-logo">
+    <div class="shan-header-username">用户名</div>
+    <img src="../../images/auth/logo_zbj2.png" class="shan-header-company-logo">
+</header>
+<div class="shan-body">
+    <div class="shan-left">
+        <div class="shan-left-section">
+            <div class="name">业务中心</div>
+            <a class="item"><span class="glyphicon glyphicon-minus f10 mr10" aria-hidden="true"></span>公司列表</a>
+            <a class="item"><span class="glyphicon glyphicon-minus f10 mr10" aria-hidden="true"></span>员工管理</a>
+            <a class="item item-on"><span class="glyphicon glyphicon-minus f10 mr10" aria-hidden="true"></span>产品组管理</a>
+        </div>
+    </div>
+    <div class="shan-main product hidden">
+        <div class="shan-main-box">
+            <div class="search-box mt0">
+                <ul class="search-ul">
+                    <li>
+                        <div>
+                            <input type="text" class="form-control" placeholder="输入公司名称">
+                        </div>
+                    </li>
+                    <li class="search-btn-li">
+                        <div class="btn">
+                            <span class="glyphicon glyphicon-search f14 mr10"></span>
+                            <span>搜索</span>
+                        </div>
+                    </li>
+                    <li class="add-btn-li">
+                        <div class="btn">
+                            <span class="glyphicon glyphicon-plus f14 mr10"></span>
+                            <span>添加产品组</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <table id="" class="mt25 table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>产品组</th>
+                        <th>描述</th>
+                        <th>基础产品</th>
+                        <th>加项包数</th>
+                        <th>产品数</th>
+                        <th>状态</th>
+                        <th>详情</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>定制套餐A产品组</td>
+                        <td>用于迪卡侬2017年检</td>
+                        <td>定制套餐A</td>
+                        <td>4</td>
+                        <td>12</td>
+                        <td>正常</td>
+                        <td>
+                            <a>查看</a>&nbsp;&nbsp;
+                            <a>编辑</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>定制套餐A产品组</td>
+                        <td>用于迪卡侬2017年检</td>
+                        <td>定制套餐A</td>
+                        <td>4</td>
+                        <td>12</td>
+                        <td class="text-red">停用</td>
+                        <td>
+                            <a>查看</a>&nbsp;&nbsp;
+                            <a>编辑</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul class="paging">
+                <li class="left"><span class="glyphicon glyphicon-triangle-left"></span></li>
+                <li class="item-on">1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li class="right"><span class="glyphicon glyphicon-triangle-right"></span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="shan-main product product-add-page">
+        <div class="shan-main-box">
+            <div class="title-area">
+                <h4 class="title">添加产品组</h4>
+                <ul class="btn-list">
+                    <li class="btn cancel-btn"><span>取消</span></li>
+                    <li class="btn save-btn"><span>保存</span></li>
+                </ul>
+            </div>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="name">产品组名称</label>
+                    <input type="text" class="form-control" id="name" placeholder="输入产品组名称">
+                </div>
+                <div class="form-group">
+                    <label for="basic" class="basic-label">基础产品</label>
+                    <input type="text" class="form-control" id="basic" placeholder="搜索基础产品">
+                </div>
+            </form>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="description" class="description-text">产品组描述</label>
+                    <textarea class="form-control description" id="description" placeholder="输入产品组描述"></textarea>
+                </div>
+            </form>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="plus-bag">加项包</label>
+                    <div class="bag-content">
+                        <span class="bag-text">必选包</span>
+                        <div class="btn add-btn" data-toggle="modal" data-target="#myModal">
+                            <span class="glyphicon glyphicon-plus f14 mr10"></span>
+                            <span>添加</span>
+                        </div>
+                        <table class="mt25 table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th>必选包逻辑</th>
+                                <th>3选1</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td rowspan="3">必选加项包</td>
+                                <td>胸部正位</td>
+                                <td rowspan="3">
+                                    <a>编辑</a> &nbsp;&nbsp;
+                                    <a class="text-red">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>腰椎侧位</td>
+                            </tr>
+                            <tr>
+                                <td>颈椎侧位</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="no-order hidden">
+                            暂无记录
+                        </div>
+                        <span class="bag-text">可选包</span>
+                        <div class="btn add-btn" data-toggle="modal" data-target="#myModal">
+                            <span class="glyphicon glyphicon-plus f14 mr10"></span>
+                            <span>添加</span>
+                        </div>
+                        <table class="mt25 table table-bordered table-striped bag-table">
+                            <thead>
+                            <tr>
+                                <th>可选包逻辑</th>
+                                <th>3选2</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td rowspan="3">可选加项包</td>
+                                <td>胸部正位</td>
+                                <td rowspan="3">
+                                    <a>编辑</a> &nbsp;&nbsp;
+                                    <a class="text-red">删除</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>腰椎侧位</td>
+                            </tr>
+                            <tr>
+                                <td>颈椎侧位</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="no-order hidden">
+                            暂无记录
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+            <form class="form-inline product-form-inline">
+                <div class="form-group">
+                    <label>产品列表</label>
+                    <div class="btn add-btn product-add-btn">
+                        <span class="glyphicon glyphicon-plus f14 mr10"></span>
+                        <span>生成产品列表</span>
+                    </div>
+                </div>
+            </form>
+            <table class="mt25 table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>基础产品</th>
+                        <th>加项包</th>
+                        <th>最终产品</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="hidden">
+                        <td colspan="4">暂无记录</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>健康套餐A</td>
+                        <td>胸部侧位</td>
+                        <td>
+                            <select class="form-control input-sm bag-select">
+                                <option value="1">健康套餐A1</option>
+                                <option value="2">健康套餐A2</option>
+                                <option value="3">健康套餐A3</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="modal fade in mt70" tabindex="-1" role="dialog"  id="myModal">
+        <div class="modal-dialog shan-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title tc">添加必选包</h4>
+                </div>
+                <div class="modal-body bag-modal-body">
+                    <label class="logic-text">选择逻辑</label>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <select class="form-control input-sm bag-select">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <span class="select-text">选</span>
+                            <select class="form-control input-sm bag-select">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                    </form>
+                    <form class="form-inline">
+                        <div class="form-group mr20">
+                            <input type="text" class="form-control"  placeholder="搜索加项包">
+                        </div>
+                        <div class="form-group">
+                            <div class="btn add-btn">
+                                <span class="glyphicon glyphicon-plus f14 mr10"></span>
+                                <span>添加</span>
+                            </div>
+                        </div>
+                    </form>
+                    <table class="mt25 table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                            <th>加项包名称</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>小心肝加项包</td>
+                            <td>
+                                <a class="text-red">删除</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer tc">
+                    <p class="text-red">抱歉，加项包数量与选择逻辑不符</p>
+                    <div class="close-btn mr40" data-dismiss="modal">取消</div>
+                    <div  class="ok-btn">完成</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $('.shan-left').css('height', $('.shan-main').outerHeight());
+    })
+</script>
+</body>
+
+</html>

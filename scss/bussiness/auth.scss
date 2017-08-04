@@ -7,6 +7,20 @@ body{
   background-color: #eff0f4;
 }
 
+.btn{
+  width:100%;
+  height:34px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 0;
+  border-radius: 4px;
+  cursor:pointer;
+  >span{
+    vertical-align: middle;
+    font-size: 14px;
+  }
+}
+
 .shan-header {
   position: fixed;
   left: 0;
@@ -21,7 +35,6 @@ body{
   }
   .shan-header-username {
     float: right;
-    font-size: 20px;
     margin-right: 34px;
     line-height: 80px;
     font-size: 14px;
@@ -275,25 +288,21 @@ font-size: 24px;
               height:20px;
               margin-bottom: 10px;
             }
-            .search-btn{
-              background-color: $sz-color-blue;
-              color:#fff;
-              width:100%;
-              height:34px;
-              line-height: 34px;
-              text-align: center;
-              vertical-align: middle;
-              font-size: 0;
-              border-radius: 4px;
-              cursor:pointer;
-              >span{
-                vertical-align: middle;
-                font-size: 14px;
-              }
-            }
+
             &.search-btn-li{
               width:110px;
-
+              .search-btn{
+                background-color: $sz-color-blue;
+                color:#fff;
+              }
+            }
+            &.add-btn-li{
+              float: right;
+              width: 130px;
+              .add-btn{
+                background-color: $sz-color-blue;
+                color:#fff;
+              }
             }
           }
         }
@@ -403,10 +412,7 @@ font-size: 24px;
     }
   }
   .shan-login{
-    background-color: #000;
-    background-image: url(../images/auth/login_bg.jpg) ;
-    background-repeat: no-repeat ;
-    background-position: 0 0;
+    background: #000 url(../images/auth/login_bg.jpg) no-repeat 0 0;
     height:900px;
     min-width: 1200px;
     margin-top: 80px;
@@ -601,4 +607,132 @@ font-size: 24px;
 [v-cloak] {
   display: none;
 }
+
+a{
+  color: $sz-color-blue;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+
+.product-add-page{
+  .shan-main-box{
+    .title-area{
+      height: 35px;
+      >.title{
+        float: left;
+        font-size: 18px;
+        border-left: 4px solid $sz-color-yellow;
+      }
+      >.btn-list{
+        float: right;
+        .btn{
+          margin-right: 20px;
+        }
+        .cancel-btn{
+          width: 90px;
+          border: 1px solid $sz-border-color-gray;
+          span{
+            color: $sz-color-black;
+          }
+        }
+        .save-btn{
+          width: 90px;
+          background-color: $sz-color-blue;
+          span{
+            color: #fff;
+          }
+        }
+      }
+    }
+    .form-inline{
+      clear: both;
+      margin-top: 20px;
+      &.product-form-inline{
+        padding-top: 25px;
+        border-top: 1px solid $sz-border-color-gray;
+      }
+      .form-group{
+        margin-right: 30px;
+        label{
+          width: 70px;
+          margin-right: 20px;
+          &.basic-label{
+            width: 58px;
+          }
+        }
+        .description{
+          width: 485px;
+          height: 90px;
+          resize: none;
+        }
+        .description-text{
+          vertical-align: top;
+          position: relative;
+          top: 10px;
+        }
+        .plus-bag{
+          vertical-align: top;
+          position: relative;
+          top: 8px;
+        }
+        .add-btn{
+          width: 115px;
+          background-color: $sz-color-blue;
+          color: #fff;
+          &.product-add-btn{
+            width: 150px;
+          }
+        }
+        .bag-content{
+          display: inline-block;
+          .bag-text{
+            font-weight: bold;
+            margin-right: 20px;
+          }
+          .bag-table{
+            width: 485px;
+          }
+          .no-order{
+            margin: 15px 0;
+            width: 485px;
+            height: 90px;
+            line-height: 90px;
+            text-align: center;
+            color: $sz-color-gray;
+            background-color: #f9f9f9;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.bag-modal-body{
+  padding: 20px 260px;
+  position: relative;
+  .logic-text{
+    position: absolute;
+    top: 45px;
+    left: 180px;
+    margin-right: 40px;
+  }
+  .form-inline{
+    margin-top: 20px;
+  }
+  .select-text{
+    margin: 0 15px;
+  }
+  .add-btn{
+    width: 115px;
+    background-color: $sz-color-blue;
+    color: #fff;
+  }
+}
+
+
+
+
 
