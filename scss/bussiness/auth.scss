@@ -123,9 +123,24 @@ body{
           margin-right: 20px;
         }
       }
+      .title-row{
+        display: flex;
+        justify-content: space-between;
+        .export-btn{
+          width: 150px;
+          height: 34px;
+          line-height: 34px;
+          text-align: center;
+          font-size: 14px;
+          background-color: $sz-color-blue;
+          border-radius: 5px;
+          color: #fff;
+          border: none;
+        }
+      }
       .title{
         font-size: 20px;
-        line-height: 24px;
+        line-height: 34px;
         color:$sz-color-gray;
         padding-left:20px;
         border-left:4px solid #fff;
@@ -292,6 +307,10 @@ font-size: 24px;
             &.search-btn-li{
               width:110px;
               .search-btn{
+                height: 34px;
+                line-height: 34px;
+                text-align: center;
+                border-radius: 5px;
                 background-color: $sz-color-blue;
                 color:#fff;
               }

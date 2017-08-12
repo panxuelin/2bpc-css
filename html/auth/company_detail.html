@@ -289,9 +289,19 @@
         <!--今日体检 end-->
         <!--员工 start-->
         <div class="shan-main-box">
-            <div class="title yellow">
-                员工
+            <div class="title-row">
+                <div class="title yellow">
+                    员工
+                </div>
+                <form action="" method="post">
+                    <input type="hidden" name="saleChannelCode" v-model="saleChannelCode"/>
+                    <button class="export-btn" type="submit">
+                        <span class="glyphicon glyphicon-download-alt f14 mr10"></span>
+                        <span>员工数据导出</span>
+                    </button>
+                </form>
             </div>
+
             <div class="search-box">
                 <ul class="search-ul">
                     <li>
@@ -348,7 +358,7 @@
                             <input type="text" class="form-control" placeholder="输入员工姓名">
                         </div>
                     </li>
-                    <li class="search-btn-li">
+                    <li class="search-btn-li ">
                         <div class="name"></div>
                         <div class="search-btn">
                             <span class="glyphicon glyphicon-search f14 mr10"></span>
@@ -359,7 +369,7 @@
 
             </div>
 
-            <table id="" class="mt25 table table-bordered table-striped">
+            <table class="mt25 table table-bordered table-striped">
                 <thead>
                 <tr>
                     <th>姓名</th>
