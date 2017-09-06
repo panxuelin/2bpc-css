@@ -1,7 +1,8 @@
 @charset "utf-8";
 @import "../core/global";
 
-$primaryColor: #318FF5;
+//$primaryColor: #318FF5;
+$primaryColor: #df7d32;
 
 body {
   min-width: 1200px;
@@ -9,6 +10,10 @@ body {
 
 .container {
   margin: 0 auto;
+}
+
+input{
+  outline:none;
 }
 
 .sz-header {
@@ -76,17 +81,17 @@ body {
         .login-form {
           font-size: 14px;
           .input-wrap {
-            margin-top: 17px;
+            margin-top: 5px;
             text-align: left;
             overflow: hidden;
             //@include flexbox;
-            #loginPhoneInput{
+            #loginPhoneInput,#loginCardInput,#loginPasswordInput,#loginPhoneInput2{
               width:385px;
             }
-            #loginVerifyCodeInput{
+            #loginVerifyCodeInput,#loginVerifyCodeInput2{
               width:295px;
             }
-            #loginImgVerifyInput{
+            #loginImgVerifyInput,#loginImgVerifyInput2{
               width:219px;
             }
             .sz-input {
@@ -131,8 +136,17 @@ body {
             color: #fff;
             cursor:pointer;
           }
+          .to-other{
+            height: 40px;
+            line-height: 40px;
+            text-align: right;
+            a{
+              font-size: 16px;
+              text-decoration: underline;
+              color: $primaryColor;
+            }
+          }
           .tips {
-            margin-top: 20px;
             line-height: 25px;
             font-size: 14px;
             text-align: left;
@@ -211,6 +225,25 @@ body {
     padding:10px;
     width:120px;
     background-color:#fff;
+  }
+}
+
+
+.my-modal{
+  z-index: 2000;top:200px;
+  .my-modal-title{
+    text-align: center;
+  }
+  .my-modal-body{
+    text-align: center;
+  }
+  .my-modal-footer{
+    text-align: center;
+    .my-btn{
+      padding: 8px 50px;
+      background: $primaryColor;
+      border:none;
+    }
   }
 
 }
